@@ -1,0 +1,634 @@
+<!doctype html>
+<html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>Yokoso Tokyo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi"/>
+<link href="etc/default.css" rel="stylesheet" type="text/css">
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script> 
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script> 
+<script src="jquery.ui.touch-punch.min.js"></script>  
+<script src="jquery.ui.touch-punch.js"></script>  
+<script type="text/javascript"> 
+$(document).ready(function() { 
+   //first 
+   $(".acc_banner .acc_title").click(function() {  
+      if($(this).next(".acc_sub").is(":visible")){ 
+         $(this).next(".acc_sub").slideUp("fast"); 
+         } else { 
+         $(".acc_banner .acc_sub").slideUp("fast"); 
+         $(this).next(".acc_sub").slideToggle("fast");  
+      }  
+   }); 
+   // 2nd 
+   $(".pu_btn").click(function() {  
+      $(this).next("div").show();  
+      $("body").css({overflow:'hidden'}).bind('touchmove', function(e){e.preventDefault()}); 
+   });  
+   $(".close").click(function() {  
+      $(".pu").hide();  
+      $("body").css({ overflow: '' }).unbind('touchmove'); 
+   }); 
+   //3th 
+   $('.drg').draggable(); 
+   //4
+   $("tr").toggle(  
+         function(){  
+                $(this).css({"background-color" : "#FEF4F6"});  
+         },
+         function(){  
+                $(this).css({"background-color" : "#ffffff"});  
+         }
+   );
+   //5 animate 
+   $("a.anchorLink").anchorAnimate() ; 
+});  
+jQuery.fn.anchorAnimate = function(settings) { 
+   settings = jQuery.extend({ 
+      speed : 500 
+   }, settings);     
+   return this.each(function(){ 
+      var caller = this 
+      $(caller).click(function (event) {     
+         event.preventDefault() 
+         var locationHref = window.location.href 
+         var elementClick = $(caller).attr("href") 
+         var destination = $(elementClick).offset().top; 
+         $("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination}, settings.speed, function()  
+         { 
+            window.location.hash = elementClick 
+         }); 
+         return false; 
+      }) 
+   }) 
+} 
+</script>
+</head>
+
+<body>
+	<section></section>
+
+	<nav>
+		<ul class="date">
+			<a href="#top" class="scroll"><li>12/15(Thu)</li></a>
+	      <a href="#Fri" class="scroll"><li>12/16(Fri)</li></a>
+			<a href="#Sat" class="scroll"><li>12/17(Sat)</li></a>
+          <a href="#Sun" class="scroll"><li>12/18(Sun)</li></a>
+		</ul>
+	</nav>
+<content>
+  <table>
+  			<tbody>
+  				<tr>
+					<th colspan="4">12/15(Thu)</th>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec">PM 06:28</td>
+				  <td class="thd">
+				  	<div class="acc_banner">
+				  		<div class="acc_title">공항버스 6011</div>
+				  		<div class="acc_sub">이전차 05:53 / 다음차 07:03</div>
+				  	</div>
+				  </td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td><a id="Fri"></a></td>
+				  <td class="sec">PM 08:37</td>
+				  <td class="thd">
+				  	<div class="acc_banner">
+						<div class="acc_title">인천공항 도착 및 탑승수속</div>
+						<div class="acc_sub">이전차 08:07 / 다음차 09:10</div>
+					</div>
+				  </td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td>
+					  <div class="pu_btn"><img src="etc/ap.png"></div>
+					  <div class="pu"><img src="etc/qr.png"><p class="t1">M8LQE6</p><div class="close">x</div></div>
+				  </td>
+				  <td class="sec">PM 10:45</td>
+				  <td class="thd">MM1008 ICN→HND</td>
+				  <td>&nbsp;</td>
+				</tr>
+			</tbody>
+		</table>
+
+  <table>
+  			<tbody>
+  				<tr>
+					<th colspan="4">12/16(Fri)</th>
+				</tr>
+				<tr>
+				  <td><img src="etc/ap.png"></td>
+				  <td class="sec">AM 00:55</td>
+				  <td class="thd">MM1008 ICN→HND</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec"></td>
+				  <td class="thd">
+				    <div class="acc_banner">
+					  	<div class="acc_title">하네다 4층 24시간 점포</div>
+					  	<div class="acc_sub">MOS CAFÉ, CAFÉ CARDINAL, Yoshinoya, Suginoko, WA-CAFETERIA</div>
+					  </div>
+				  </td>
+				  <td>
+					  <div class="pu_btn"><img src="etc/mp.png"></div>
+				  <div class="pu"><img class="drg" src="etc/hnd.gif"><div class="close">x</div></div></td>
+				</tr>
+				<tr>
+				  <td rowspan="2">
+					  <div class="pu_btn"><img src="etc/tr.png"></div>
+					  <div class="pu"><img class="drg" src="etc/keikyu.gif"><div class="close">x</div></div>
+				  </td>
+				  <td class="sec">AM 05:26</td>
+				  <td class="thd">게이큐선 하네다공항국제터미널역-</td>
+				  <td class="lst" rowspan="2">￥410<br/>
+				  	  <div class="pu_btn"><img src="etc/tp.png"></div>
+					  <div class="pu"><img class="drg" src="etc/ticket.gif"><div class="close">x</div></div>
+				  </td>
+				</tr>
+				<tr>
+				  <td class="sec">AM 05:48</td>
+				  <td class="thd rgt">-센가쿠지역</td>
+				</tr>
+				<tr>
+				  <td rowspan="2">
+				  	  <div class="pu_btn"><img src="etc/tr.png"></div>
+					  <div class="pu"><iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d12968.000625575309!2d139.7409399845249!3d35.65236778166054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e3!4m5!1s0x60188a52d36fe06f%3A0x2b9c4ac341f8dd5a!2z7IS86rCA7L-g7KeAIOydvOuzuA!3m2!1d35.638132!2d139.739714!4m5!1s0x60188be9d1ae11e1%3A0x5851f1d35efc45b9!2z7Iug67CU7IucLCDsnbzrs7ggVG9reW8sIOa4ryDmlrDmqYsy5LiB55uu!3m2!1d35.6661322!2d139.7584123!5e0!3m2!1sko!2skr!4v1479307681514" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe><div class="close">x</div></div>
+				  </td>
+				  <td class="sec">AM 06:07</td>
+				  <td class="thd">아사쿠사선 센가쿠지역-</td>
+				  <td rowspan="2"></td>
+				</tr>
+				<tr>
+				  <td class="sec">AM 06:13</td>
+				  <td class="thd rgt">-신바시역</td>
+				</tr>
+				<tr>
+				  <td>
+				  	  <div class="pu_btn"><img src="etc/wk.png"></div>
+					  <div class="pu"><iframe src="https://www.google.com/maps/embed?pb=!1m27!1m12!1m3!1d3241.463214828388!2d139.75298675130244!3d35.66559468010076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m12!3e6!4m5!1s0x60188be9d1ae11e1%3A0x5851f1d35efc45b9!2z7Iug67CU7IucLCDsnbzrs7ggVG9reW8sIOa4ryDmlrDmqYsy5LiB55uu!3m2!1d35.6661322!2d139.7584123!4m4!1s0x0%3A0x342f14a23d58cbb4!3m2!1d35.664259!2d139.7520379!5e0!3m2!1sko!2skr!4v1479308296619" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe><div class="close">x</div></div>
+				  </td>
+				  <td class="sec">(10분)</td>
+				  <td class="thd">신바시역에서 숙소까지</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec">
+				  	  <div class="pu_btn"><img src="etc/ht.png"></div>
+					  <div class="pu">
+						  <p class="t2">ファーストキャビン愛宕山</p>
+						  <p class="m2">FIRST CABIN ATAGOYAMA</p>
+						  <p>〒105-0003　東京都港区西新橋3-10-7<br>03-3433-1126</p>
+						  <p>체크인 17:00 / 체크아웃 10:00</p>
+						  <p>영업 시간<br>아침 6:30~9:30<br>밤 18:00~24:00<br>(LO 23:30)</p>
+						  <p>조식 ¥700 / 추가타올 ¥100<br>세탁기 ¥300 / 건조기 ¥100</p>
+					  <div class="close">x</div></div>
+				  </td>
+				  <td class="thd">퍼스트캐빈 아타고야마</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td>
+					  <div class="pu_btn"><img src="etc/wk.png"></div>
+					  <div class="pu"><iframe src="https://www.google.com/maps/embed?pb=!1m27!1m12!1m3!1d12965.979541729275!2d139.75253183452924!3d35.66481463161375!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m12!3e2!4m4!1s0x0%3A0x342f14a23d58cbb4!3m2!1d35.664259!2d139.7520379!4m5!1s0x601889647120144f%3A0x57c9eadb7b62ef7f!2sTsukiji+Market%2C+5+Chome-2-1+Tsukiji%2C+Chuo%2C+Tokyo+104-0045+%EC%9D%BC%EB%B3%B8!3m2!1d35.665486099999995!2d139.7706668!5e0!3m2!1sko!2skr!4v1479310270676" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe><div class="close">x</div></div>				  	
+				  </td>
+				  <td class="sec">(25분)</td>
+				  <td class="thd">숙소에서 츠키지시장까지</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec">
+					  <div class="pu_btn"><img src="etc/sp.png"></div>
+					  <div class="pu">
+						  <p class="t4">築地市場</p>
+						  <p class="m4">TSUKIJI MARKET</p>
+						  <p>〒104-0045 東京都中央区築地 5-2-1</p>
+						  <p>영업시간<br>4:00~13:00</p>
+					  <div class="close">x</div></div>				  
+				  </td>
+				  <td class="thd">츠키지시장</td>
+				  <td>
+					  <div class="pu_btn"><img src="etc/fd.png"></div>
+					  <div class="pu"><div class="close">x</div></div>
+					  <div class="pu_btn"><img src="etc/tp.png"></div>
+					  <div class="pu"><div class="close">x</div></div>					  
+				   </td>
+				</tr>
+				<tr>
+				  <td rowspan="2"></td>
+				  <td class="sec">AM 08:31</td>
+				  <td class="thd">긴자선 신바시역-</td>
+				  <td rowspan="2"></td>
+				</tr>
+				<tr>
+				  <td class="sec">AM 08:40</td>
+				  <td class="thd rgt">-니혼바시역</td>
+				</tr>
+				<tr>
+				  <td rowspan="2"></td>
+				  <td class="sec">AM 08:46</td>
+				  <td class="thd">도자이선 니혼바시역-</td>
+				  <td rowspan="2"></td>
+				</tr>
+				<tr>
+				  <td class="sec">AM 09:04</td>
+				  <td class="thd rgt">-나카노역</td>
+				</tr>
+				<tr>
+				  <td rowspan="2"></td>
+				  <td class="sec">AM 09:20</td>
+				  <td class="thd">JR츄오센 나카노역-</td>
+				  <td rowspan="2"></td>
+				</tr>
+				<tr>
+				  <td class="sec">AM 09:40</td>
+				  <td class="thd rgt">-미타카역</td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec"></td>
+				  <td class="thd">미타카역-지브리미술관 1.3km 17분</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec">AM 10:00</td>
+				  <td class="thd">(지브리미술관 정보)</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td rowspan="2"></td>
+				  <td class="sec">PM 12:00</td>
+				  <td class="thd">JR소부센 미타카역-</td>
+				  <td rowspan="2"></td>
+				</tr>
+				<tr>
+				  <td class="sec">PM 12:12</td>
+				  <td class="thd rgt">-나카노역</td>
+				</tr>
+				<tr>
+				  <td rowspan="2"></td>
+				  <td class="sec">PM 12:30</td>
+				  <td class="thd">도자이선 나카노역-</td>
+				  <td rowspan="2"></td>
+				</tr>
+				<tr>
+				  <td class="sec">PM12:42</td>
+				  <td class="thd rgt">-구단시타역</td>
+				</tr>
+				<tr>
+				  <td rowspan="2"></td>
+				  <td class="sec">PM 12:46</td>
+				  <td class="thd">한조몬선 구단시타역-</td>
+				  <td rowspan="2"></td>
+				</tr>
+				<tr>
+				  <td class="sec">PM 12:56</td>
+				  <td class="thd rgt">-시부야역</td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec"></td>
+				  <td class="thd">(시부야 관광정보)</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec"></td>
+				  <td class="thd">(시부야 식당정보)</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec"></td>
+				  <td class="thd">시부야역-메이지신궁 1.5km 18분</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec"></td>
+				  <td class="thd">(메이지신궁 관광정보)</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td rowspan="2"></td>
+				  <td class="sec">PM 03:00</td>
+				  <td class="thd">한조몬선 시부야역-</td>
+				  <td rowspan="2"></td>
+				</tr>
+				<tr>
+				  <td class="sec">PM 03:12</td>
+				  <td class="thd rgt">-진보초역</td>
+				</tr>
+				<tr>
+				  <td rowspan="2"></td>
+				  <td class="sec">PM 03:15</td>
+				  <td class="thd">신주쿠선 진보초역-</td>
+				  <td rowspan="2"></td>
+				</tr>
+				<tr>
+				  <td class="sec">PM 03:19</td>
+				  <td class="thd rgt">-이와모토초역</td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec"></td>
+				  <td class="thd">이와모토초역-아키하바라역 600m 8분</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec"></td>
+				  <td class="thd">(아키하바라 관광정보)</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td rowspan="2"></td>
+				  <td class="sec">PM 04:23</td>
+				  <td class="thd">히비야선 아키하바라역-</td>
+				  <td rowspan="2"></td>
+				</tr>
+				<tr>
+				  <td class="sec">PM 04:27</td>
+				  <td class="thd rgt">-우에노역</td>
+				</tr>
+				<tr>
+				  <td rowspan="2"></td>
+				  <td class="sec">PM 04:30</td>
+				  <td class="thd">긴자선 우에노역-</td>
+				  <td rowspan="2"></td>
+				</tr>
+				<tr>
+				  <td class="sec">PM 04:36</td>
+				  <td class="thd rgt">-아사쿠사역</td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec"></td>
+				  <td class="thd">아사쿠사역-센소지 600m 7분</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec"></td>
+				  <td class="thd">(아사쿠사 관광정보)</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td rowspan="2"></td>
+				  <td class="sec">PM 05:39</td>
+				  <td class="thd">아사쿠사선 아사쿠사역-</td>
+				  <td rowspan="2"></td>
+				</tr>
+				<tr>
+				  <td class="sec">PM 05:41</td>
+				  <td class="thd rgt">-구라마에역</td>
+				</tr>
+				<tr>
+				  <td rowspan="2"></td>
+				  <td class="sec">PM 05:47</td>
+				  <td class="thd">오에도선 구라마에역-</td>
+				  <td rowspan="2"></td>
+				</tr>
+				<tr>
+				  <td class="sec">PM 06:07</td>
+				  <td class="thd rgt">-아카바네바시역</td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec"></td>
+				  <td class="thd">아카바네바시역-도쿄타워 650m 9분</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec"></td>
+				  <td class="thd">(도쿄타워 관광정보)</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td><a id="Sat"></a></td>
+				  <td class="sec"></td>
+				  <td class="thd">(도쿄타워 근처 식당정보)</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec"></td>
+				  <td class="thd">도쿄타워-퍼스트캐빈아타고야마
+1.3km 16분</td>
+				  <td></td>
+				</tr>
+			</tbody>
+		</table>
+		
+ 		 <table>
+  			<tbody>
+  				<tr>
+					<th colspan="4">12/17(Sat)</th>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec"></td>
+				  <td class="thd">(기상)</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec"></td>
+				  <td class="thd">(아침식사 어떻게할지)</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec"></td>
+				  <td class="thd">(체크아웃정보)</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec"></td>
+				  <td class="thd">퍼스트캐빈아타고야마-신바시역
+850m 10분</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec"></td>
+				  <td class="thd">신바시역 코인라커
+http://coinlockersearch.com/<br>shinbashi.html</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td rowspan="2"></td>
+				  <td class="sec">AM 09:43</td>
+				  <td class="thd">유리카모메선 신바시역-</td>
+				  <td rowspan="2"></td>
+				</tr>
+				<tr>
+				  <td class="sec">AM 10:00</td>
+				  <td class="thd rgt">-시바우라후토역</td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec"></td>
+				  <td class="thd">시바우라후토역-오다이바카이힌코엔역
+3.2km 40분</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec"></td>
+				  <td class="thd">(레인보우브릿지 관광정보)</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td rowspan="2"></td>
+				  <td class="sec">AM 11:00</td>
+				  <td class="thd">유리카모메선 오다이바카이힌코엔역-</td>
+				  <td rowspan="2"></td>
+				</tr>
+				<tr>
+				  <td class="sec">AM 11:17</td>
+				  <td class="thd rgt">-아오미역</td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec"></td>
+				  <td class="thd">(비너스포트 관광정보)</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td rowspan="2"></td>
+				  <td class="sec">PM 12:17</td>
+				  <td class="thd">유리카모메선 아오미역-</td>
+				  <td rowspan="2"></td>
+				</tr>
+				<tr>
+				  <td class="sec">PM 12:35</td>
+				  <td class="thd rgt">-신토요스역</td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec"></td>
+				  <td class="thd">(점심식사 어떻게 할지)</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec">PM 01:00</td>
+				  <td class="thd">(공연정보)</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec">PM 05:00</td>
+				  <td class="thd">(공연정보)</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td rowspan="2"></td>
+				  <td class="sec">PM 09:00</td>
+				  <td class="thd">유리카모메선 신토요스역-</td>
+				  <td rowspan="2"></td>
+				</tr>
+				<tr>
+				  <td class="sec">PM 09:18</td>
+				  <td class="thd rgt">-아오미역</td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec"></td>
+				  <td class="thd">(대관람차 관광정보)</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td rowspan="2"></td>
+				  <td class="sec">PM 09:48</td>
+				  <td class="thd">유리카모메선 아오미역-</td>
+				  <td rowspan="2"></td>
+				</tr>
+				<tr>
+				  <td class="sec">PM 10:03</td>
+				  <td class="thd rgt">-다이바역</td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec"></td>
+				  <td class="thd">(자유의여신상 위치정보)</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td rowspan="2"></td>
+				  <td class="sec">PM 10:33</td>
+				  <td class="thd">유리카모메선 다이바역-</td>
+				  <td rowspan="2"></td>
+				</tr>
+				<tr>
+				  <td class="sec">PM 10:58</td>
+				  <td class="thd rgt">-신바시역</td>
+				</tr>
+				<tr>
+				  <td rowspan="2"><a id="Sun"></a></td>
+				  <td class="sec">PM 11:15</td>
+				  <td class="thd">아사쿠사선 신바시역-</td>
+				  <td rowspan="2"></td>
+				</tr>
+				<tr>
+				  <td class="sec">PM 11:21</td>
+				  <td class="thd rgt">-센가쿠지역</td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec">PM 11:39</td>
+				  <td class="thd">게이큐선 센가쿠지역-</td>
+				  <td></td>
+				</tr>
+			</tbody>
+			</tbody>
+		</table>
+		
+ 		<table>
+  			<tbody>
+  				<tr>
+					<th colspan="4">12/18(Sun)</th>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec">AM 12:02</td>
+				  <td class="thd rgt">-하네다공항국제터미널역</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec">AM 01:55</td>
+				  <td class="thd">MM1009 HND→ICN</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec">AM 04:35</td>
+				  <td class="thd">MM1009 HND→ICN</td>
+				  <td></td>
+				</tr>
+				<tr>
+				  <td></td>
+				  <td class="sec">AM 05:23</td>
+				  <td class="thd">공항철도 첫차</td>
+				  <td></td>
+				</tr>
+			</tbody>
+		</table>
+
+  </content>
+</body>
+</html>
